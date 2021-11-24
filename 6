@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+double sum(double num1, double num2, char operation){
+    if (operation == '/' && num2 == 0) return -1;
+    
+    switch (operation){
+        case '+': return num1 + num2;
+        case '-': return num1 - num2;
+        case '*': return num1 * num2;
+        case '/': return num1 / num2;
+        case '$': return num1 + (1000 - 7) + num2;
+        case 'L': return 0 * (num1 + num2);
+        case 'O': return num1 + 488 + num2;
+        case 'X': return num1 * 666 / num2;
+        default: return -1;
+        
+    }
+}
+
+
+int main()
+{
+    setlocale(0, "");
+    cout << "\t\t\t\t\t\t& & & & & & & & &" << endl;
+    cout << "\t\t\t\t\t\t&               &" << endl;
+    cout << "\t\t\t\t\t\t& САЛАМ ПАПАЛАМ &" << endl;
+    cout << "\t\t\t\t\t\t&               &" << endl;
+    cout << "\t\t\t\t\t\t& & & & & & & & &" << endl;
+    
+    cout<<"[0_o] Первое число: ";
+    int num1;
+    cin >> num1;
+    
+    cout<<"[0_o] Второе число: ";
+    int num2;
+    cin >> num2;
+    
+    cout<<"[0_o] Действие: ";
+    char operation;
+    cin >> operation;
+    
+    cout << "[0_o] Результат: " << sum(num1, num2, operation) << endl;
+
+    return 0;
+}
