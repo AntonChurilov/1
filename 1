@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main()
+{
+    setlocale(0, "");
+    int quarter;
+    std::cout << "Введите 1 из 4 кварталов\n";
+    std::cin >> quarter;
+    if (quarter == 1) 
+    {
+        std::cout << "Сейчас лето, жарко(";
+    }
+    else if (quarter == 2) 
+    {
+        std::cout << "Сейчас осень, следует одеться тепло и взять с собой зонт";
+    }
+    else if (quarter == 3) 
+    {
+        std::cout << "Сейчас зима, нужна шапка";
+    }
+    else if (quarter == 4) 
+    {
+        std::cout << "Сейчас Весна, везде грязь";
+    }
+    else
+        std::cout << "Написано же 1 из 4";
+        return 0;
+    }
